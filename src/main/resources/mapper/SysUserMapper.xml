@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aidancloud.demo.mapper.SysUserMapper">
+
+    <select id="getUserList" resultType="com.aidancloud.demo.proto.sysuser.response.SysUserListDTO">
+      SELECT id,username,nickname,email,mobile,state FROM sys_user
+      <where>
+          <if test="username != null and username != ''">
+            <bind name="pattern" value="'%' + username + '%'"/>
+            username like #{pattern}
+          </if>
+      </where>
+    </select>
+
+</mapper>
+
+
