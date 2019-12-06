@@ -13,13 +13,6 @@ import java.util.List;
 @Slf4j
 class ProjectFrameDemoApplicationTests {
 
-    @Autowired
-    private SysUserMapper sysUserMapper;
 
-    @Test
-    void contextLoads() {
-        List<SysUser> sysUsers = sysUserMapper.selectList(null);
-        log.info(sysUsers.toString());
-    }
 
 }
