@@ -5,11 +5,9 @@ spring:
   #时间戳统一转换
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
-    #property-naming-strategy: CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES
 
   messages:
     basename: i18n.messages
-
 #  mvc:
 #    throw-exception-if-no-handler-found: true
 #  resources:
@@ -35,13 +33,14 @@ spring:
       web-stat-filter:
         enabled: true
         url-pattern: /*
-        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+        exclusions: '*.lib,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
       stat-view-servlet:
         enabled: true
         url-pattern: /druid/*
         login-username: hutao
         login-password: 123456
    #redis相关
+
 #  redis:
 #    host: 118.24.215.214
 #    port: 6379
